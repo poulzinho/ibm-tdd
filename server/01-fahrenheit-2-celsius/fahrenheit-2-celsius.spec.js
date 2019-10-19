@@ -14,5 +14,7 @@ describe.only('a fahrenheitToCelcius function should', () => {
     it('return 100 for 212', () => {
         expect(fahrenheitToCelcius(212)).toEqual(100);
     });
-    it.todo('return 10 for 50');
+    it('return 10 for 50', () => {
+        expect(fahrenheitToCelcius(50)).toEqual(10);
+    });
 });
