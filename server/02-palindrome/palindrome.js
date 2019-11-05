@@ -1,3 +1,3 @@
-const isPalindrome = (word) => word === word.split('').reverse().join('');
+const isPalindrome = (phrase) => phrase === phrase.split('').reverse().join('');
 
 module.exports = {isPalindrome};
