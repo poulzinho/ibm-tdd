@@ -21,5 +21,9 @@ describe.only('the palindrome canary spec', () => {
             isPalindrome('')
         }).toThrowError('empty strings are not palindromes');
     });
-    it.todo('error for not a string');
+    it('error for not a string', () => {
+        expect(() => {
+            isPalindrome(121)
+        }).toThrowError('input must be a string');
+    });
 });
