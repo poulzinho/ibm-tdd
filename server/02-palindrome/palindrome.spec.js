@@ -1,6 +1,6 @@
 const {isPalindrome} = require("./palindrome");
 
-describe.only('the palindrome canary spec', () => {
+describe('the palindrome canary spec', () => {
     it('shows the infrastructure works', () => {
         expect(true).toBe(true);
     });
