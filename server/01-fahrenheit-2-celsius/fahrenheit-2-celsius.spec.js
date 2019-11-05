@@ -7,7 +7,7 @@ describe('the canary spec for fahrenheit to celsius calculator', () => {
     });
 });
 
-describe.only('a fahrenheitToCelcius function should', () => {
+describe('a fahrenheitToCelcius function should', () => {
     it('return 0 for 32', () => {
         expect(fahrenheitToCelcius(32)).toEqual(0);
     });
