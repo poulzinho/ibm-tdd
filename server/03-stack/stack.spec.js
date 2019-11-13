@@ -7,9 +7,13 @@ describe('the stack canary spec', () => {
 });
 
 describe('a stack', () => {
-  it('starts empty, stack size of 0', () => {
+  it('starts empty', () => {
     const stack = new Stack();
-    expect(stack.length).toEqual(0);
+    expect(stack.isEmpty).toBeTruthy();
+  });
+  it('starts with stack size of 0', () => {
+    const stack = new Stack();
+    expect(stack.size).toEqual(0);
   });
   it.todo('is not empty when pushed');
   it.todo('stack size is 1 when pushed');

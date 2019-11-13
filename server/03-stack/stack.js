@@ -1,5 +1,7 @@
 function Stack() {
-    this.length = 0;
+    var data = [];
+    this.isEmpty = data.length === 0;
+    this.size = data.length;
 }
 
 module.exports = {Stack};
