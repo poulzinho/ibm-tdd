@@ -58,6 +58,15 @@ describe('a stack', () => {
         stack.push(item);
         expect(stack.pop()).toEqual(item);
     });
-    it.todo('pops two items with the most recent first');
+    it('pops two items with the most recent first', () => {
+        const first = 'first';
+        const second = 'second';
+
+        stack.push(first);
+        stack.push(second);
+
+        expect(stack.pop()).toEqual(second);
+        expect(stack.pop()).toEqual(first);
+    });
     it.todo('accepts only a positive capacity');
 });
