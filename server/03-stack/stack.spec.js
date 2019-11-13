@@ -38,7 +38,7 @@ describe('a stack', () => {
     });
     it('throws overflow error when pushing to a stack at full capacity', () => {
         const maxItems = 1000;
-        stack.maxItems(maxItems);
+        stack.capacity(maxItems);
 
         Array(maxItems).fill('a').forEach((item) => {
             stack.push(item);
@@ -68,5 +68,16 @@ describe('a stack', () => {
         expect(stack.pop()).toEqual(second);
         expect(stack.pop()).toEqual(first);
     });
-    it.todo('accepts only a positive capacity');
+    it('accepts only a positive capacity', () => {
+        const negativeCapacity = -1000;
+        const zeroCapacity = 0;
+
+        expect(() => {
+            stack.capacity(negativeCapacity);
+        }).toThrowError('capacity cannot be negative');
+
+        expect(() => {
+            stack.capacity(zeroCapacity);
+        }).toThrowError('capacity cannot be zero');
+    });
 });
