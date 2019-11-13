@@ -36,7 +36,18 @@ describe('a stack', () => {
         stack.pop();
         expect(stack.size()).toBe(0);
     });
-    it.todo('throws overflow error when pushing to a stack at full capacity');
+    it('throws overflow error when pushing to a stack at full capacity', () => {
+        const maxItems = 1000;
+        stack.maxItems(maxItems);
+
+        Array(maxItems).fill('a').forEach((item) => {
+            stack.push(item);
+        });
+
+        expect(() => {
+            stack.push('b');
+        }).toThrowError(`stack at capacity limit: ${maxItems}`);
+    });
     it.todo('throw underflow error when popping an empty stack');
     it.todo('pops the same one item when pushed');
     it.todo('pops two items with the most recent first');
