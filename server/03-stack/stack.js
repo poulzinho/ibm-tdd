@@ -17,7 +17,7 @@ function Stack() {
         if (data.length === 0) {
             throw new Error('cannot pop, stack is empty');
         }
-        data.pop()
+        return data.pop()
     };
 }
 

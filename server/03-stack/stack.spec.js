@@ -53,7 +53,11 @@ describe('a stack', () => {
             stack.pop();
         }).toThrowError('cannot pop, stack is empty');
     });
-    it.todo('pops the same one item when pushed');
+    it('pops the same one item when pushed', () => {
+        const item = 'a';
+        stack.push(item);
+        expect(stack.pop()).toEqual(item);
+    });
     it.todo('pops two items with the most recent first');
     it.todo('accepts only a positive capacity');
 });
