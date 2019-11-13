@@ -8,11 +8,17 @@ function Stack() {
 
     this.push = (item) => {
         if ((data.length + 1) > maxItems) {
-            throw new Error(`stack at capacity limit: ${maxItems}`);
+            throw new Error(`cannot push, stack at capacity limit: ${maxItems}`);
         }
         data.push(item)
     };
-    this.pop = () => data.pop();
+
+    this.pop = () => {
+        if (data.length === 0) {
+            throw new Error('cannot pop, stack is empty');
+        }
+        data.pop()
+    };
 }
 
 module.exports = {Stack};
