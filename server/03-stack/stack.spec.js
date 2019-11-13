@@ -20,9 +20,12 @@ describe('a stack', () => {
     });
     it('is not empty when pushed', () => {
         stack.push('a');
-        expect(stack.size()).toBeGreaterThan(0);
+        expect(stack.isEmpty()).toBeFalsy();
     });
-    it.todo('stack size is 1 when pushed');
+    it('stack size is 1 when pushed', () => {
+        stack.push('a');
+        expect(stack.size()).toBe(1);
+    });
     it.todo('stack is empty when pushed and popped');
     it.todo('stack size is 0 when pushed and popped');
     it.todo('throws overflow error when pushing to a stack at full capacity');
