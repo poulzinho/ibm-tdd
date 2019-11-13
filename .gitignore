@@ -6,5 +6,5 @@ node_modules/
 
 # package.json - because we want participants to start from scratch
 # project setup instructions are in README.md
-package.json
+# package.json
 package-lock.json

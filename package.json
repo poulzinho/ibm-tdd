@@ -1,0 +1,26 @@
+{
+  "name": "ibm-cloud-garage-tdd",
+  "version": "1.0.0",
+  "description": "0. Clone this git repository     * In your profile > settings > SSH Keys confirm you have set up an SSH Key for Github. If not, then set up SSH access to github. [Connecting to GitHub with SSH](https://help.github.com/enterprise/2.6/user/articles/connecting-to-github-with-ssh/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "tdd": "jest --verbose --watch --onlyChanged",
+    "precommit": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poulzinho/ibm-tdd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poulzinho/ibm-tdd/issues"
+  },
+  "homepage": "https://github.com/poulzinho/ibm-tdd#readme",
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "jest": "^24.9.0"
+  }
+}
