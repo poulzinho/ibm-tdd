@@ -1,5 +1,5 @@
 function Stack() {
-    var data = [];
+    const data = [];
     this.isEmpty = data.length === 0;
     this.size = data.length;
 }
