@@ -13,7 +13,7 @@ describe('a stack', () => {
     });
 
     it('starts empty', () => {
-        expect(stack.isEmpty).toBeTruthy();
+        expect(stack.isEmpty()).toBeTruthy();
     });
     it('starts with stack size of 0', () => {
         expect(stack.size()).toEqual(0);
@@ -29,9 +29,13 @@ describe('a stack', () => {
     it('stack is empty when pushed and popped', () => {
         stack.push('a');
         stack.pop();
+        expect(stack.isEmpty()).toBeTruthy();
+    });
+    it('stack size is 0 when pushed and popped', () => {
+        stack.push('a');
+        stack.pop();
         expect(stack.size()).toBe(0);
     });
-    it.todo('stack size is 0 when pushed and popped');
     it.todo('throws overflow error when pushing to a stack at full capacity');
     it.todo('throw underflow error when popping an empty stack');
     it.todo('pops the same one item when pushed');
