@@ -1,3 +1,4 @@
+const {findPrimeFactors} = require("./prime-factors");
 describe('the prime factors canary spec', () => {
   it('shows the infrastructure works', () => {
     expect(true).toBe(true);
@@ -5,7 +6,9 @@ describe('the prime factors canary spec', () => {
 });
 
 describe('a prime factors function should', () => {
-  it.todo('return none for 1');
+  it('return none for 1', () => {
+    expect(findPrimeFactors(1)).toEqual([]);
+  });
   it.todo('return 2 for 2');
   it.todo('return 3 for 3');
   it.todo('return 2, 2 for 4');
