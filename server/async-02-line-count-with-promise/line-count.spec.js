@@ -10,7 +10,11 @@ describe('line count can be checked', () => {
         done();
     });
 
-    it.todo('by returning the promise after .then');
+    it('by returning the promise after .then', () => {
+        return lineCount(filename).then((count) => {
+            expect(count).toEqual(12);
+        });
+    });
 
     it.todo('by using resolves');
 
