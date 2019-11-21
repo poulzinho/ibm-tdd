@@ -16,7 +16,9 @@ describe('line count can be checked', () => {
         });
     });
 
-    it.todo('by using resolves');
+    it('by using resolves', () => {
+        return expect(lineCount(filename)).resolves.toEqual(12);
+    });
 
     it.todo('by using async/await');
 });
