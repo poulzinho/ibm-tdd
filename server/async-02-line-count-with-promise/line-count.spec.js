@@ -20,5 +20,8 @@ describe('line count can be checked', () => {
         return expect(lineCount(filename)).resolves.toEqual(12);
     });
 
-    it.todo('by using async/await');
+    it('by using async/await', async () => {
+        const count = await lineCount(filename);
+        expect(count).toEqual(12);
+    });
 });
